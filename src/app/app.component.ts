@@ -8,13 +8,4 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'gft-ailos';
 
-  icons: Array<any> = [
-    { name: 'menu', class: 'opacity'},
-    { name: 'search', class: ''},
-    { name: 'star_border', class: ''},
-    { name: 'textsms', class: ''},
-    { name: 'blur_linear', class: ''},
-    { name: 'account_balance', class: ''}
-  ]
-
 }

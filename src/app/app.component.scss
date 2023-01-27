@@ -8,99 +8,13 @@
     width: 5.5rem;
     background-color: #165C7D;
     color: #fff;
-
-    & .box-logo {
-      width: 5.5rem;
-      height: 5.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    & .menu ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 0.8rem;
-
-      & mat-icon {
-        font-size: 1.7rem;
-        margin-right: .3rem
-      }
-
-      & .opacity {
-        opacity: .5;
-      }
-    }
-
   }
 
   & mat-drawer-content .toolbar {
     background-color: #fff;
     height: 5.5rem;
     padding: 1rem;
-
-    
-    & .box {
-      width: 100%;
-      
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      
-      
-      &-text {
-        margin-top: .6rem;
-        
-        & h1 { font-size: 24px; line-height: .5; font-weight: 700; }
-        & small { color: #787878; font-size: 12px; line-height: 18px; }
-      }
-
-      &-info {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        color: #125D79;
-
-        &--notification {
-          display: flex;
-
-          & mat-icon {
-            font-size: 2.2rem;
-            margin-bottom: .5rem;
-            margin-right: .2rem;
-          }
-        }
-
-        & button {
-          background-color: #fff;
-          border-radius: 3rem;
-          padding: 0.4rem 1rem 0.3rem;
-          font-size: 1rem;
-          font-weight: 600;
-        }
-
-        & .avatar {
-          width: 2.5rem;
-          height: 2.5rem;
-          border-radius: 100%;
-          border: 2px solid;
-          background-repeat: no-repeat;
-          background-position: center;
-          background-size: cover;
-          position: relative;
-
-          & mat-icon {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            transform: translate(25%, 25%);
-          }
-        }
-      }
-
-    }
   }
-
 }
+
+app-topbar { width: 100%; }

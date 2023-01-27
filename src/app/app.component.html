@@ -1,48 +1,12 @@
 <mat-drawer-container class="container">
   <mat-drawer mode="side" opened>
     <mat-toolbar class="toolbar">
-      <div class="box-logo">
-        <img
-          width="60"
-          alt="Angular Logo"
-          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
-        />
-      </div>
-      
-      <nav class="menu">
-        <ul>
-          <li *ngFor="let icon of icons">
-            <mat-icon class="{{icon.class}}">{{icon.name}}</mat-icon>
-          </li>
-        </ul>
-      </nav>
-      
+      <app-sidenav></app-sidenav>
     </mat-toolbar>
   </mat-drawer>
   <mat-drawer-content>
     <mat-toolbar class="toolbar">
-      <nav class="box">
-        <div class="box-text">
-          <b><h1>NOVA ADMISSÃO COOPERADO</h1></b>
-          <small>Cadastro / Admissão do Cooperado / Nova Admissão de Cooperado</small>
-        </div>
-        <div class="box-info">
-
-          <div class="box-info--notification">
-            <mat-icon matBadge="7" matBadgeColor="warn">notifications_none</mat-icon>
-          </div>
-
-          <button>VIACREDI</button>
-
-          <div
-            [ngStyle]="{'background-image': 'url(https://media.licdn.com/dms/image/D4D03AQEgaxBFZH3hzA/profile-displayphoto-shrink_400_400/0/1664747214833?e=1680134400&v=beta&t=WBrhBKmshBRvo8e6ZR0u9xHf8ePRbSDlscakIVj8VtI)'}"
-            class="avatar"
-          >
-            <mat-icon>settings</mat-icon>
-          </div>
-
-        </div>
-      </nav>
+      <app-topbar></app-topbar>
     </mat-toolbar>
     <router-outlet></router-outlet>
   </mat-drawer-content>
