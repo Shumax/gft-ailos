@@ -1,1 +1,39 @@
-<p>consultation works!</p>
+<section id="consultation">
+  <div class="steps">
+    <ul>
+      <li *ngFor="let step of steps; let i = index">
+        <div class="icon" [ngClass]="i == 0 ? 'icon-active' :''" ></div>
+        <div class="bar" *ngIf="i != 3" ></div>
+        <span [ngClass]="i != 0 ? 'disabled' : ''">{{step}}</span>
+      </li>
+    </ul>
+  </div>
+
+  <section class="row">
+    <aside class="content">
+
+      <div class="content-info">
+        <h1>Informe o CPF do futuro cooperado (a)</h1>
+        <p>Se necessário, você poderá duplicar uma conta existente ou pausar e retomar este cadastro futuramente.<br/>
+          Digite apenas os números (sem pontos ou traços). </p>
+      </div>
+
+      <form class="form-row">
+        <div class="form-col">
+          <label>CPF</label>
+          <input name="cpf" mask="000.000.000-00" />
+        </div>
+        <div class="form-col">
+          <button class="button-primary">Consultar por CPF</button>
+        </div>
+      </form>
+
+    </aside>
+
+    <footer>
+      <button class="button-primary button-primary--reversed">Dicas para admissão</button>
+    </footer>
+
+  </section>
+
+</section>

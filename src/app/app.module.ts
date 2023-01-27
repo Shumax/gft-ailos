@@ -7,7 +7,11 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ConsultationComponent } from './pages/consultation/consultation.component';
 import { CooperatedComponent } from './pages/cooperated/cooperated.component';
+import { IConfig, NgxMaskModule } from 'ngx-mask';
 
+const maskConfig: Partial<IConfig> = {
+  validation: false,
+}
 
 @NgModule({
   declarations: [
@@ -19,7 +23,8 @@ import { CooperatedComponent } from './pages/cooperated/cooperated.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    NgxMaskModule.forRoot(maskConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]

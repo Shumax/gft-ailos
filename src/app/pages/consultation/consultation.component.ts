@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConsultationComponent implements OnInit {
 
+  isLinear = false;
+  steps = [
+    'Início',
+    'Documentos',
+    'Dados cadastrais',
+    'Admissão'
+  ]
+
   constructor() { }
 
   ngOnInit(): void {
   }
+  
 
 }
