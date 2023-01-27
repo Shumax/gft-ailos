@@ -1,13 +1,5 @@
 <section id="consultation">
-  <div class="steps">
-    <ul>
-      <li *ngFor="let step of steps; let i = index">
-        <div class="icon" [ngClass]="i == 0 ? 'icon-active' :''" ></div>
-        <div class="bar" *ngIf="i != 3" ></div>
-        <span [ngClass]="i != 0 ? 'disabled' : ''">{{step}}</span>
-      </li>
-    </ul>
-  </div>
+  <app-steps></app-steps>  
 
   <section class="row">
     <aside class="content">

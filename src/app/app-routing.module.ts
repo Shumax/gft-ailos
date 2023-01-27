@@ -5,7 +5,9 @@ import { ConsultationComponent } from './pages/consultation/consultation.compone
 import { CooperatedComponent } from './pages/cooperated/cooperated.component';
 
 const routes: Routes = [
-  { path: '', component: ConsultationComponent }
+  { path: '', component: ConsultationComponent },
+  { path: 'cooperated', component: CooperatedComponent },
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({

@@ -10,6 +10,7 @@ import { CooperatedComponent } from './pages/cooperated/cooperated.component';
 import { IConfig, NgxMaskModule } from 'ngx-mask';
 import { SidenavComponent } from './shared/components-template/sidenav/sidenav.component';
 import { TopbarComponent } from './shared/components-template/topbar/topbar.component';
+import { StepsComponent } from './shared/components-pages/steps/steps.component';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -21,7 +22,8 @@ const maskConfig: Partial<IConfig> = {
     ConsultationComponent,
     CooperatedComponent,
     SidenavComponent,
-    TopbarComponent
+    TopbarComponent,
+    StepsComponent
   ],
   imports: [
     BrowserModule,
