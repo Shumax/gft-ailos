@@ -10,13 +10,13 @@
           Digite apenas os números (sem pontos ou traços). </p>
       </div>
 
-      <form class="form-row">
+      <form class="form-row" #form="ngForm" >
         <div class="form-col">
           <label>CPF</label>
-          <input name="cpf" mask="000.000.000-00" />
+          <input name="cpf" mask="000.000.000-00" name="cpf" [(ngModel)]="partner.cpf"  [disabled]="true" />
         </div>
         <div class="form-col">
-          <button class="button-primary">Consultar por CPF</button>
+          <button class="button-primary" [disabled]="true">Consultar por CPF</button>
         </div>
       </form>
 
@@ -28,15 +28,15 @@
           </header>
           <section>
             <aside>
-              <div><mat-icon>person</mat-icon></div>
-              <div>
+              <div class="icon"><mat-icon class="icon-gray" >person</mat-icon></div>
+              <div class="info">
                 <span>Nome</span>
                 {{partner.nome}}
               </div>
             </aside>
             <aside>
-              <div><mat-icon>check_circle</mat-icon></div>
-              <div>
+              <div class="icon"><mat-icon class="icon-green" >check_circle</mat-icon></div>
+              <div class="info">
                 <span>Situação do CPF</span>
                 Regular
               </div>

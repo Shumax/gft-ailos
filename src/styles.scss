@@ -95,10 +95,6 @@ body { margin: 0; }
     background-color: #114a65;
   }
 
-  & :disabled {
-    background-color: #A2BECB;
-  }
-
   &--reversed {
     background-color: #fff;
     color: #165C7D;
@@ -108,5 +104,9 @@ body { margin: 0; }
       background-color: #f1f1f1;
     }
   }
+}
 
+button:disabled {
+  background-color: #A2BECB;
+  cursor: default;
 }

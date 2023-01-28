@@ -8,6 +8,7 @@
 
   & .content {
     width: 50%;
+    padding-bottom: 5rem;
 
     &-info {
       & h1 { font-size: 22px; margin: 1.5rem 0 .2rem }
@@ -24,6 +25,7 @@
     bottom: 0;
     left: 5.5rem;
     z-index: 1;
+    box-shadow: 0 0 4px rgba(0,0,0,.25);
   }
 
 }
@@ -32,7 +34,7 @@
   width: 100%;
   display: flex;
 
-  & .form-col:first-child {width: 60%;padding-right: 1rem;}
+  & .form-col:first-child {width: 40%;padding-right: 1rem;}
   & .form-col:last-child {width: 40%;}
 
   & label {

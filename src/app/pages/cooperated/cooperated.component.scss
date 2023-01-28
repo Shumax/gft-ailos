@@ -1,10 +1,57 @@
 #cooperated {
   padding: 1rem;
 
-  & .card {
-    background: #FFFFFF;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 2px;
+  & .content-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem 0;
+
+    & .card {
+      background: #FFFFFF;
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 2px;
+      width: 42%;
+
+      & header {
+        padding: 1rem;
+        
+        & h4, & p { margin: 0; font-weight: 700; font-size: 14px; }
+        & p { color: #787878; font-size: 11px; font-weight: 400; line-height: 1; }
+      }
+
+      & section { padding-bottom: 1rem; }
+
+      & aside {
+        padding: 0 1rem;
+        display: flex;
+
+        & .icon {
+          padding: 1rem 1.4rem 1rem .6rem;
+          display: flex;
+          
+          & mat-icon { align-self: center; }
+          &-gray {color: #889499}
+          &-green {color:  #00C246;}
+        }
+        
+        & .info {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          font-size: 14px;
+
+          & span {
+            color: #787878;
+            font-size: 11px;
+          }
+        }
+
+      }
+
+
+    }
   }
+
 
 }
