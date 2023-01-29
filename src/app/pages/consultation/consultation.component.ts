@@ -2,6 +2,7 @@ import { NgForm } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { SnackBarComponent } from 'src/app/shared/components-pages/snack-bar/snack-bar.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-consultation',
@@ -36,10 +37,13 @@ export class ConsultationComponent implements OnInit {
     tipo_sanguineo: "AB-",
     cor: "roxo"
   }
+  session: any = sessionStorage.getItem('cooperated')
 
-  constructor( private _snackBar: MatSnackBar ) { }
+  constructor( private _snackBar: MatSnackBar, private router: Router ) { 
+    this.session ? sessionStorage.removeItem('cooperated') : ''
+  }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   handlePartner(form: NgForm) {
 
@@ -47,10 +51,13 @@ export class ConsultationComponent implements OnInit {
       this._snackBar.openFromComponent(SnackBarComponent, {
         duration: 5000
       })
+      return false
     }
 
-    return false
+    sessionStorage.setItem('cooperated',this.partner)
+    this.router.navigate(['/cooperated'])
 
+    return false
   }
   
 

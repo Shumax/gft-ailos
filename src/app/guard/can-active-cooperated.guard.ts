@@ -9,16 +9,16 @@ export class CanActiveCooperatedGuard implements CanActivate {
 
   constructor(private router: Router){}
 
-  session: string  = sessionStorage.getItem('cooperated') || ''
+  session: string = sessionStorage.getItem('cooperated') || ''
 
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    
+      
       if(this.session) {
         return true
       } else {
-        this.router.navigate(['/'])
+        this.router.navigate([''])
         return false
       }
 
