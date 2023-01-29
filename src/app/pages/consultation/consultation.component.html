@@ -10,13 +10,24 @@
           Digite apenas os números (sem pontos ou traços). </p>
       </div>
 
-      <form class="form-row">
+      <form class="form-row" #form="ngForm" (ngSubmit)="handlePartner(form)" >
         <div class="form-col">
           <label>CPF</label>
-          <input name="cpf" mask="000.000.000-00" />
+          <input 
+            id="cpf"
+            name="cpf" 
+            ngModel 
+            #cpf="ngModel" 
+            mask="000.000.000-00" 
+            required 
+            [ngClass]="cpf.invalid ? 'error-input' : ''"
+          />
+          <div *ngIf="cpf.invalid && (cpf.dirty || cpf.touched)">
+            <div class="error error-label" *ngIf="cpf.errors?.['required']">Campo CPF é obrigatório*</div>
+          </div>
         </div>
         <div class="form-col">
-          <button class="button-primary">Consultar por CPF</button>
+          <button type="submit" class="button-primary">Consultar por CPF</button>
         </div>
       </form>
 
